@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifications",
+  "info": {
+    "name": "notifications",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "read": {
+      "type": "boolean",
+      "default": false
+    },
+    "comment": {
+      "model": "comments"
+    },
+    "order": {
+      "model": "orders"
+    }
+  }
+}

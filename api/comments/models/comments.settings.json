@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "name": "comments"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "comment_content": {
+      "type": "text"
+    },
+    "parent_id": {
+      "type": "integer",
+      "default": 0
+    },
+    "count_reply": {
+      "type": "integer",
+      "default": 0
+    },
+    "name_reply_to": {
+      "type": "string"
+    },
+    "product": {
+      "via": "comments",
+      "model": "products"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "comments"
+    }
+  }
+}
